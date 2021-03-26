@@ -1,0 +1,64 @@
+@import '../node_modules/datepicker-pattern/datepicker';
+
+.custom_date-range {
+    @include datepicker_base--styles;
+    .calendar_modal {
+         left: 0;
+
+         .datepicker-range-calendar-date#from {
+             @include media($device) {
+                 margin-right: 10%;
+             }
+         }
+
+         .datepicker-range-calendar-date {
+             
+            .error {
+                 border: solid color("deep-red");
+
+                 background: rgba(color("deep-red"), .1);
+                 color: color("deep-red");
+             }
+         }
+
+         .datepicker-range-calendar-date:not(.mobile) {
+             @include media($mobile) {
+                 display: none;
+             }
+         }
+
+         .datepicker-range-calendar-date.mobile {
+            @include media($tablet-up) {
+                display: none;
+            }
+         }
+
+         .calendars {
+             @include media($mobile) {
+                 display: none;
+             }
+         }
+
+         .month-change {
+             @include media($mobile) {
+                 display: none;
+             }
+         }
+    }
+
+    .date-picker-error {
+        font-size: $tiny-font-size;
+        color: red;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &.from {
+            @include span-columns(6);
+        }
+
+        &.to {
+            @include span-columns(5);
+            padding-left: $small-spacing;
+        }
+    }
+}

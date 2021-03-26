@@ -1,0 +1,41 @@
+#========================================= BEGIN Documentation =========================================
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+# About CODEOWNERS: https://help.github.com/en/articles/about-code-owners
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @NUID1 and @NUID2 will be requested for
+# review when someone opens a pull request. Reserved for Design System Developers Only.
+*         @I004217 @L488170 @I122089 @P654486 @H514845 @T012775 @I518980 @P498846 @G285318 @K931194 @K991578 @S343624 @M633734 @D941886 @K389370 @L916960 @Y225811 @X581437 @C689281 @F744146
+
+# Order is important; the last matching pattern takes the most
+# precedence. When someone opens a pull request that only
+# modifies JS files, only @js-owner and not the global
+# owner(s) will be requested for a review.
+#*.yml    @I004217 @L488170 @I122089 @P654486 @H514845 @T012775 @I518980 @P498846 @G285318 @K931194 @K991578 @S343624 @M633734 @D941886 @K389370 @L916960 @Y225811 @X581437 @C689281 @F744146
+
+# You can also use email addresses if you prefer. They'll be
+# used to look up users just like we do for commit author
+# emails.
+#*.go docs@example.com
+
+# In this example, @doctocat owns any files in the build/logs
+# directory at the root of the repository and any of its
+# subdirectories.
+#docs/* @doctocat
+
+# The `docs/*` pattern will match files like
+# `docs/getting-started.md` but not further nested files like
+# `docs/build-app/troubleshooting.md`.
+#docs/*  docs@example.com
+
+# In this example, @octocat owns any file in an apps directory
+# anywhere in your repository.
+#apps/ @octocat
+
+# In this example, @doctocat owns any file in the `/docs`
+# directory in the root of your repository.
+#/docs/ @doctocat
+
+#========================================= END Documentation =========================================
